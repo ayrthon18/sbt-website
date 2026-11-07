@@ -1,0 +1,152 @@
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBT | Clientes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabecera idéntica a las demás páginas -->
+    <header class="cabecalho">
+        <a href="index.html" class="logo">SBT<span>.</span></a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Contacto.html">Contato</a></li>
+                <li><a href="Clientes.html" class="active">Clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contato" style="display: flex; flex-direction: column; align-items: center; padding-bottom: 60px;">
+
+        <!-- 1. Título principal en portugués -->
+        <div class="contato-intro" style="text-align: center; margin-bottom: 40px;">
+            <span class="subtitulo">SBT GAMING TEAM</span>
+            <h1>A confiança dos <span>nossos clientes</span></h1>
+            <p style="color: #aaa; margin-top: 10px; max-width: 600px;">
+                Na SBT trabalhamos para oferecer serviços com qualidade. 
+                Estas são algumas das experiências de quem confiou em nós.
+            </p>
+        </div>
+
+        <!-- Contenedor general centrado -->
+        <div style="width: 100%; max-width: 1000px; display: flex; flex-direction: column; gap: 50px; padding: 0 20px;">
+
+            <!-- 2. Imágenes de los clientes ordenadas y con tamaño mediano legible -->
+            <section style="width: 100%;">
+                <h2 style="text-align: center; color: #fff; margin-bottom: 25px; font-size: 1.5rem;">
+                    Comprovantes e Opiniões
+                </h2>
+
+                <div style="
+                    display: grid; 
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+                    gap: 20px; 
+                    justify-content: center;">
+                    
+                    <div style="background: #13111c; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 15px; text-align: center;">
+                        <img src="img.clientes/clientes1.jpeg" alt="Comprovante 1" style="width: 100%; max-height: 250px; object-fit: contain; border-radius: 6px; background: #0b0a12;">
+                    </div>
+
+                    <div style="background: #13111c; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 15px; text-align: center;">
+                        <img src="img.clientes/cliente2.jpeg" alt="Comprovante 2" style="width: 100%; max-height: 250px; object-fit: contain; border-radius: 6px; background: #0b0a12;">
+                    </div>
+
+                    <div style="background: #13111c; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 15px; text-align: center;">
+                        <img src="img.clientes/cliente3.jpeg" alt="Comprovante 3" style="width: 100%; max-height: 250px; object-fit: contain; border-radius: 6px; background: #0b0a12;">
+                    </div>
+
+                </div>
+
+                </div>
+            </section>
+
+            <!-- 3. Reputación en GGMAX -->
+            <div class="ggmax-card" style="width: 100%; text-align: center; margin: 0 auto;">
+                <span class="subtitulo">REPUTAÇÃO</span>
+                <h2>Nossa reputação na GGMAX</h2>
+                <p style="color: #aaa; margin: 10px 0 20px 0;">
+                    Confira as avaliações e o histórico completo de vendas em nossa loja oficial.
+                </p>
+                <a href="https://ggmax.com.br/perfil/Sbtdiff"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="botao"
+                   style="display: inline-block;">
+                    Ver perfil na GGMAX
+                </a>
+            </div>
+
+            <!-- 4. Sección para dejar comentarios -->
+            <section style="
+                width: 100%; 
+                background: #13111c; 
+                border: 1px solid rgba(255, 255, 255, 0.1); 
+                border-radius: 12px; 
+                padding: 30px;">
+                
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="subtitulo">FEEDBACK</span>
+                    <h2 style="color: #fff; margin-top: 5px;">Deixe seu comentário</h2>
+                    <p style="color: #aaa; font-size: 0.9rem;">Já contratou algum serviço da SBT? Conte sua experiência para a comunidade.</p>
+                </div>
+
+                <form id="commentForm" onsubmit="agregarComentario(event)" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" id="nombreCliente" placeholder="Seu nome ou Nickname" required style="
+                        padding: 12px; 
+                        background: #0b0a12; 
+                        border: 1px solid #2a2838; 
+                        border-radius: 6px; 
+                        color: #fff;">
+
+                    <textarea id="textoComentario" rows="4" placeholder="Escreva seu comentário sobre nosso serviço..." required style="
+                        padding: 12px; 
+                        background: #0b0a12; 
+                        border: 1px solid #2a2838; 
+                        border-radius: 6px; 
+                        color: #fff; 
+                        resize: vertical;"></textarea>
+
+                    <button type="submit" class="botao" style="align-self: flex-start; border: none; cursor: pointer;">
+                        Publicar Comentário
+                    </button>
+                </form>
+
+                <!-- Lista de comentarios -->
+                <div id="listaComentarios" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
+                    <div style="background: #0b0a12; padding: 15px; border-radius: 8px; border-left: 3px solid #6c5ce7;">
+                        <strong style="color: #fff;">Gabriel M.</strong>
+                        <p style="color: #bbb; margin-top: 5px; font-size: 0.95rem;">Excelente atendimento de Elo Job, super rápido e confiável. Recomendo 100%!</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Script para agregar comentarios al instante -->
+    <script>
+        function agregarComentario(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombreCliente').value;
+            const texto = document.getElementById('textoComentario').value;
+
+            const nuevoComentario = document.createElement('div');
+            nuevoComentario.style.cssText = 'background: #0b0a12; padding: 15px; border-radius: 8px; border-left: 3px solid #6c5ce7;';
+            nuevoComentario.innerHTML = `<strong style="color: #fff;">${nombre}</strong><p style="color: #bbb; margin-top: 5px; font-size: 0.95rem;">${texto}</p>`;
+
+            document.getElementById('listaComentarios').prepend(nuevoComentario);
+            document.getElementById('commentForm').reset();
+        }
+    </script>
+
+</body>
+</html>
